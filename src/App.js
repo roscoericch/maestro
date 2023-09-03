@@ -80,7 +80,7 @@ function App() {
           </div>
           <div className="flex flex-col items-center justify-center mx-auto w-fit">
             <span className="text-center text-[15px] md:text-[20px] text-white w-full">
-              Join our referral program today and earn with your friends
+              Join our referral program today and earn with your friends.
             </span>
             <button className="bg-[White] text-[#1f044f] hover:bg-[#1f044f] hover:text-[#FFF] py-[5px] px-[10px] font-[400] rounded-[10px] w-full text-[131.25%]">
               Join Us
