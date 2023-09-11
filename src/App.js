@@ -2,9 +2,13 @@ import logo from "./assets/maestrologo.png";
 import sniper from "./assets/sniperbot-maestro-crop.png";
 import { FaTwitter, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Connectwallet from "./components/connectwallet";
 import "./App.css";
 
 function App() {
+  const openwallet = () => {
+    window.my_modal_3.showModal();
+  };
   return (
     <>
       <div
@@ -27,10 +31,12 @@ function App() {
           </div>
           <div className="flex-none">
             <button
+              onClick={openwallet}
               style={{
                 background: "linear-gradient(90deg,#594ffc,#8550ef",
               }}
               className="bg[#ecc31f] text-white hover:bg[#1f044f] py-[3px] md:py-[5px] px-[10px] md:px-[30px] font-[400] rounded-[10px] w-full text-[131.25%]"
+              id="connectButton"
             >
               Connect Wallet
             </button>
@@ -82,8 +88,11 @@ function App() {
             <span className="text-center text-[15px] md:text-[20px] text-white w-full">
               Join our referral program today and earn with your friends.
             </span>
-            <button className="bg-[White] text-[#1f044f] hover:bg-[#1f044f] hover:text-[#FFF] py-[5px] px-[10px] font-[400] rounded-[10px] w-full text-[131.25%]">
-              Join Us
+            <button
+              className="bg-[White] text-[#1f044f] hover:bg-[#1f044f] hover:text-[#FFF] py-[5px] px-[10px] font-[400] rounded-[10px] w-full text-[131.25%]"
+              id="button3"
+            >
+              Join Now
             </button>
           </div>
         </div>
@@ -108,6 +117,8 @@ function App() {
               <a
                 className="text-[25px] text-center hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button1"
+                onClick={openwallet}
               >
                 Slippage
               </a>
@@ -116,6 +127,8 @@ function App() {
               <a
                 className="text-[25px] text-center hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button2"
+                onClick={openwallet}
               >
                 Copy Trade
               </a>
@@ -124,6 +137,8 @@ function App() {
               <a
                 className="text-[25px] hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button3"
+                onClick={openwallet}
               >
                 My Trades
               </a>
@@ -132,6 +147,8 @@ function App() {
               <a
                 className="text-[25px] hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button4"
+                onClick={openwallet}
               >
                 Wallets
               </a>
@@ -140,6 +157,8 @@ function App() {
               <a
                 className="text-[25px] text-center hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button4"
+                onClick={openwallet}
               >
                 Premium Subscription
               </a>
@@ -148,6 +167,8 @@ function App() {
               <a
                 className="text-[25px] text-center hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button4"
+                onClick={openwallet}
               >
                 Basic and Advanced bot settings
               </a>
@@ -156,6 +177,8 @@ function App() {
               <a
                 className="text-[25px] hover:px-[1rem] hover:py-[0.1rem] hover:bg-gradient-to-r from-[#594ffc] to-[#8550ef] rounded-[8px]"
                 href="#"
+                id="button4"
+                onClick={openwallet}
               >
                 Others
               </a>
@@ -166,6 +189,7 @@ function App() {
           <button>close</button>
         </form>
       </dialog>
+      <Connectwallet />
     </>
   );
 }
